@@ -35,6 +35,20 @@ let config = {
         use: [CssWebpackPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
+        test: /\.less$/,
+        use: [CssWebpackPlugin.loader, 'css-loader', 'postcss-loader', {
+          loader: 'less-loader',
+          options: {
+            lessOptions: {
+              modifyVars: {
+                'primary-color': '#ff0000'
+              },
+              javascriptEnabled: true,
+            }
+          }
+        }],
+      },
+      {
         test: /\.styl$/,
         use: [
           CssWebpackPlugin.loader,
@@ -69,7 +83,6 @@ let config = {
       filename: 'index.html',
       template: './src/app.html',
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       MODE: JSON.stringify(process.env.NODE_ENV),
     }),
@@ -99,8 +112,8 @@ if (process.env.NODE_ENV === 'local') {
       static: {
         directory: path.join(__dirname, 'dist'),
       },
-      host: 'localhost', // 'localhost',//host: '192.168.0.57',
       hot: true,
+      host: 'localhost', // 'localhost',//host: '192.168.0.57',
       historyApiFallback: true,
       compress: true,
     },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-
-const App = () => <div>123</div>;
+import App from './common/layout';
+import 'antd/dist/antd.less';
 
 render(<App />, document.getElementById('app'));
