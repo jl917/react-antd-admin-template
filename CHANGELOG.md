@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.1...v1.0.2) (2021-09-11)
+
+
+### Bug Fixes
+
+* **common:** layout 적용. ([689aaca](https://github.com/julong1988/react-antd-admin-template/commit/689aaca69feab8e68f86661457ae3c49eab6e804))
+
 ## [1.0.1](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.0...v1.0.1) (2021-09-11)
 
 
