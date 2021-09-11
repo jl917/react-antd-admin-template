@@ -55,6 +55,7 @@ let config = {
           {
             loader: 'css-loader',
             options: {
+              url: false,
               modules: {
                 localIdentName: '[hash:base64:16]',
               },
@@ -79,7 +80,7 @@ let config = {
       chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
-      title: 'title',
+      title: 'React-antd-admin-template',
       filename: 'index.html',
       template: './src/app.html',
     }),
