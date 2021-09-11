@@ -1,2 +1,11 @@
 # react-antd-admin-template
-react-antd-admin-template typescript
+### dev
+- typescript
+- webpack bundler
+- stylus, less
+- eslint, airbnb, prettier
+- jest, @testing-library/react(todo)
+
+### ui
+- react
+- antd(todo)
