@@ -35,6 +35,10 @@ const routes: IRouter[] = [
     title: 'editor',
     path: '/dashboard',
   },
+  {
+    title: 'network',
+    path: '/network',
+  },
 ];
 
 export default routes;
