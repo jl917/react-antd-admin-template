@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.4...v1.0.5) (2021-09-14)
+
+
+### Bug Fixes
+
+* **common:** recoil적용 ([29f0ff3](https://github.com/julong1988/react-antd-admin-template/commit/29f0ff3b0363138a55b7767e38800b79108d3f23))
+* **layout:** 레이아웃 정리 ([b6681f7](https://github.com/julong1988/react-antd-admin-template/commit/b6681f73acad08c6fd12c66d4cfb9121ede6719b))
+
 ## [1.0.4](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.3...v1.0.4) (2021-09-13)
 
 
