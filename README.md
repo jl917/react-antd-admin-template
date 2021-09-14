@@ -8,4 +8,6 @@
 
 ### ui
 - react
-- antd(todo)
+- antd
+- axios
+- recoil(todo)
