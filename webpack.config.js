@@ -5,9 +5,9 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const path = require('path');
-const fs = require('fs');
 
 let config = {
   entry: './src/index.tsx',
@@ -18,6 +18,7 @@ let config = {
   resolve: {
     alias: {
       "@": path.resolve(__dirname, './src'),
+      process: "process/browser",
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
@@ -73,6 +74,13 @@ let config = {
     ],
   },
   plugins: [
+    new Dotenv({
+      path: `./env/${process.env.NODE_ENV}`,
+      safe: true,
+    }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')],
     }),
@@ -84,9 +92,6 @@ let config = {
       title: 'React-antd-admin-template',
       filename: 'index.html',
       template: './src/app.html',
-    }),
-    new webpack.DefinePlugin({
-      MODE: JSON.stringify(process.env.NODE_ENV),
     }),
     new CopyPlugin({
       patterns: [
