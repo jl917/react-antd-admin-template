@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.5...v1.0.6) (2021-09-18)
+
+
+### Bug Fixes
+
+* **common:** moment, dayjs 설치 ([36db5c5](https://github.com/julong1988/react-antd-admin-template/commit/36db5c5b50378f9ff1befd9c86585606b7f4c677))
+
 ## [1.0.5](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.4...v1.0.5) (2021-09-14)
 
 
