@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.6...v1.0.7) (2021-09-18)
+
+
+### Bug Fixes
+
+* **common:** husky 설치 및 pre-commit적용 ([119c929](https://github.com/julong1988/react-antd-admin-template/commit/119c929745e08f15bcc4c80656f02d69af573adf))
+
 ## [1.0.6](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.5...v1.0.6) (2021-09-18)
 
 
