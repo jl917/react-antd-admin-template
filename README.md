@@ -4,11 +4,13 @@
 - webpack bundler
 - stylus, less
 - eslint, airbnb, prettier
-- jest, @testing-library/react(todo)
+- jest, @testing-library/react
 - husky
 
 ### ui
 - react
 - antd
 - axios
-- recoil(todo)
+- recoil
+- moment(dayjs)
+- lodash-es
