@@ -1,6 +1,6 @@
 {
   "name": "react-antd-admin-template",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "react-antd-admin-template typescript",
   "scripts": {
     "start": "export NODE_ENV='local' && webpack serve",
