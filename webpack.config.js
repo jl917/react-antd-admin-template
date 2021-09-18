@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssWebpackPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const webpack = require('webpack');
@@ -92,6 +93,7 @@ let config = {
         { from: "./src/public", to: "./" },
       ],
     }),
+    new AntdDayjsWebpackPlugin(),
   ],
   optimization: {
     splitChunks: {
