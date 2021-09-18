@@ -35,7 +35,7 @@ instance.interceptors.response.use(
     NProgress.done();
     notification.error({
       message: error.response.status,
-      description: `${error.response.data}(Detail see console)`,
+      description: `${error.response.data}(Detail see devTool)`,
     });
     return Promise.reject(error);
   },
