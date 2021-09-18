@@ -1,3 +1,11 @@
+## [1.0.11](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.10...v1.0.11) (2021-09-18)
+
+
+### Bug Fixes
+
+* **common:** axios 오류 문구 수정 ([c986e6b](https://github.com/julong1988/react-antd-admin-template/commit/c986e6b64e478261d1504d1efa382858cf651f58))
+* **common:** env, recoil로 관리 ([d3c06e1](https://github.com/julong1988/react-antd-admin-template/commit/d3c06e19268cc2fecb2c353219986c343218bf30))
+
 ## [1.0.10](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.9...v1.0.10) (2021-09-18)
 
 
