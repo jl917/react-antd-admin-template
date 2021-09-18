@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.8...v1.0.9) (2021-09-18)
+
+
+### Bug Fixes
+
+* **common:** lodash-es 추가 ([96be2ce](https://github.com/julong1988/react-antd-admin-template/commit/96be2ce3a7b4891122c099e4509a6915e8321963))
+
 ## [1.0.8](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.7...v1.0.8) (2021-09-18)
 
 
