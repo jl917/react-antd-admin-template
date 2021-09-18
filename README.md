@@ -5,6 +5,7 @@
 - stylus, less
 - eslint, airbnb, prettier
 - jest, @testing-library/react(todo)
+- husky
 
 ### ui
 - react
