@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.11...v1.0.12) (2021-10-06)
+
+
+### Bug Fixes
+
+* **common:** sentry적용, Provider리뉴얼, 내비게이션 활성화 기능 ([75b67be](https://github.com/julong1988/react-antd-admin-template/commit/75b67bef0c85f8a2204b792197a485fe0d6f17f8))
+
 ## [1.0.11](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.10...v1.0.11) (2021-09-18)
 
 
