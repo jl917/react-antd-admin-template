@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { RecoilRoot } from 'recoil';
+import Provider from '@/Provider';
 import App from './router';
 import 'antd/dist/antd.less';
 
 render(
-  <RecoilRoot>
+  <Provider>
     <App />
-  </RecoilRoot>,
+  </Provider>,
   document.getElementById('app'),
 );

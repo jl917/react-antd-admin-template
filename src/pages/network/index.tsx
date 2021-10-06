@@ -15,12 +15,18 @@ const PageNetwork = () => {
     const result = await axios.get('https://randomuser.me/api/err');
     console.log(result);
   };
+
+  const throwError = () => {
+    // eslint-disable-next-line
+    throw 'sentry error test';
+  };
   return (
     <>
       <div>env: {ENV.DB_HOST}</div>
       <div>
         <Button onClick={getUrl}>success</Button>
         <Button onClick={getUrl2}>error</Button>
+        <Button onClick={throwError}>throw error</Button>
       </div>
     </>
   );

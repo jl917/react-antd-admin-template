@@ -14,3 +14,6 @@
 - recoil
 - moment(dayjs)
 - lodash-es
+
+### recommend
+- sentry(https://sentry.io/)
