@@ -3,16 +3,16 @@
   "version": "1.0.12",
   "description": "react-antd-admin-template typescript",
   "scripts": {
-    "start": "export NODE_ENV='local' && webpack serve",
-    "build": "export NODE_ENV='production' && webpack",
-    "build:dev": "export NODE_ENV='dev' && webpack",
-    "build:qa": "export NODE_ENV='qa' && webpack",
-    "build:stage": "export NODE_ENV='stage' && webpack",
+    "start": "cross-env NODE_ENV='local' webpack serve",
+    "build": "cross-env NODE_ENV='production' webpack",
+    "build:dev": "cross-env NODE_ENV='dev' webpack",
+    "build:qa": "cross-env NODE_ENV='qa' webpack",
+    "build:stage": "cross-env NODE_ENV='stage' webpack",
     "lint": "eslint --ext .jsx,.js,.ts,.tsx ./src/",
     "fix": "eslint --fix --ext .jsx,.js,.ts,.tsx ./src/",
     "test": "jest",
     "test:c": "jest --coverage",
-    "analyz": "export NODE_ENV='production' && export REPORT=true && webpack"
+    "analyz": "cross-env NODE_ENV='production' REPORT=true webpack"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "babel-plugin-jsx-remove-data-test-id": "^3.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.2.0",
     "cssnano": "^5.0.8",
     "dotenv-webpack": "^7.0.3",
