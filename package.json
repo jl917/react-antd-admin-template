@@ -1,6 +1,6 @@
 {
   "name": "react-antd-admin-template",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "react-antd-admin-template typescript",
   "scripts": {
     "start": "cross-env NODE_ENV='local' webpack serve",
