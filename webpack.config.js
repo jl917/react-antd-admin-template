@@ -75,8 +75,7 @@ let config = {
   },
   plugins: [
     new Dotenv({
-      path: `./env/${process.env.NODE_ENV}`,
-      safe: true,
+      path: `./env/${process.env.NODE_ENV}`
     }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
