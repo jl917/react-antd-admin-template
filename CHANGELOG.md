@@ -1,3 +1,11 @@
+## [1.0.14](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.13...v1.0.14) (2021-11-06)
+
+
+### Bug Fixes
+
+* **common:** commitlint추가 ([5adb8a9](https://github.com/julong1988/react-antd-admin-template/commit/5adb8a9d3582d90ffedff091e64b42bf95b44f74))
+* **config:** webpack dotenv safe모드 변경 ([f52bea4](https://github.com/julong1988/react-antd-admin-template/commit/f52bea4704166e9c29c556bf62eab188cc227cfe))
+
 ## [1.0.13](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.12...v1.0.13) (2021-10-09)
 
 
