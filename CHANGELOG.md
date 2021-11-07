@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.14...v1.0.15) (2021-11-07)
+
+
+### Bug Fixes
+
+* **common:** test환경 셋팅 ([04227bf](https://github.com/julong1988/react-antd-admin-template/commit/04227bfc38a99799f18a11ddfa14b5c02bc880fd))
+
 ## [1.0.14](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.13...v1.0.14) (2021-11-06)
 
 
