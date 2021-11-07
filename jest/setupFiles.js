@@ -1,3 +1,6 @@
+const expect = require('expect');
+const expectExtend = require('./expect');
+
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -11,3 +14,5 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: jest.fn(),
   }))
 });
+
+expect.extend(expectExtend);

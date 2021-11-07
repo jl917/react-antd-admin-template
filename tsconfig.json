@@ -11,15 +11,23 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "outDir":"./_tmp/",
+    "outDir": "./_tmp/",
     "moduleResolution": "Node",
+    "types": [
+      "jest"
+    ],
+    "lib": [
+      "dom"
+    ],
     "typeRoots": [
       "./node_modules/@types",
       "./types"
     ],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
   "exclude": [

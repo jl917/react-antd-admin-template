@@ -6,6 +6,7 @@ const config = {
   ],
   plugins: [
     // "@babel/plugin-transform-typescript",
+    "@babel/plugin-transform-runtime",
     // "babel-plugin-jsx-remove-data-test-id"
   ]
 };
