@@ -1,3 +1,11 @@
+## [1.0.16](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.15...v1.0.16) (2021-11-08)
+
+
+### Bug Fixes
+
+* **common:** npm publish 금지 ([33b709f](https://github.com/julong1988/react-antd-admin-template/commit/33b709f84118c1715a15b03acccacf26e244c1b8))
+* **common:** 오타 수정 ([1b87f6b](https://github.com/julong1988/react-antd-admin-template/commit/1b87f6bce8e85b4a07e6c45dcf10575a0324df90))
+
 ## [1.0.15](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.14...v1.0.15) (2021-11-07)
 
 
