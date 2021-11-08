@@ -1,24 +1,21 @@
 import React from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { Switch as Routes, BrowserRouter, Route } from 'react-router-dom';
 import Loader from './Loader';
 import routes from './routes';
 
 const Router: React.FC = () => (
   <BrowserRouter>
-    <Switch>
+    <Routes>
       {routes.map(({ path }: IRouter) => {
         const props = {
-          path: [path],
+          path: [path, ...(path === '/dashboard' ? ['/'] : [])],
           key: path,
           component: Loader(path),
           exact: true,
         };
-        if (path === '/dashboard') {
-          props.path.push('/');
-        }
         return <Route {...props} />;
       })}
-    </Switch>
+    </Routes>
   </BrowserRouter>
 );
 

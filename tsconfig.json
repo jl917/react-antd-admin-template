@@ -13,12 +13,6 @@
     "resolveJsonModule": true,
     "outDir": "./_tmp/",
     "moduleResolution": "Node",
-    "types": [
-      "jest"
-    ],
-    "lib": [
-      "dom"
-    ],
     "typeRoots": [
       "./node_modules/@types",
       "./types"
