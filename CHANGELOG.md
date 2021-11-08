@@ -1,3 +1,10 @@
+## [1.0.17](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.16...v1.0.17) (2021-11-08)
+
+
+### Bug Fixes
+
+* **common:** router 코드 변경 & tsconfig 수정 ([862bf43](https://github.com/julong1988/react-antd-admin-template/commit/862bf4309834d2a5da8038deeb053a53a6cb103a))
+
 ## [1.0.16](https://github.com/julong1988/react-antd-admin-template/compare/v1.0.15...v1.0.16) (2021-11-08)
 
 
