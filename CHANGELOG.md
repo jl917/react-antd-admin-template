@@ -1,3 +1,10 @@
+## [1.0.18](https://github.com/jl917/react-antd-admin-template/compare/v1.0.17...v1.0.18) (2021-11-13)
+
+
+### Bug Fixes
+
+* julong1988 => jl917 ([1d2eedd](https://github.com/jl917/react-antd-admin-template/commit/1d2eeddfc2fd2c755097425bba71feadee67b80f))
+
 ## [1.0.17](https://github.com/jl917/react-antd-admin-template/compare/v1.0.16...v1.0.17) (2021-11-08)
 
 
