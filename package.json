@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julong1988/react-antd-admin-template.git"
+    "url": "git+https://github.com/jl917/react-antd-admin-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/julong1988/react-antd-admin-template/issues"
+    "url": "https://github.com/jl917/react-antd-admin-template/issues"
   },
-  "homepage": "https://github.com/julong1988/react-antd-admin-template#readme",
+  "homepage": "https://github.com/jl917/react-antd-admin-template#readme",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/plugin-transform-runtime": "^7.16.0",
