@@ -1,28 +1,22 @@
-const path = require('path');
-
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    project: "./tsconfig.json",
-    useJSXTextNode: true
+    project: './tsconfig.json',
+    useJSXTextNode: true,
   },
   plugins: ['@typescript-eslint', 'prettier'],
-  extends: [
-    'airbnb',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   env: {
-    'browser': true,
-    'node': true,
-    'es6': true
+    browser: true,
+    node: true,
+    es6: true,
   },
   rules: {
     'prettier/prettier': ['error'],
-    'max-len': ['error', { 'code': 100 }],
+    'max-len': ['error', { code: 100 }],
     'prefer-promise-reject-errors': ['off'],
     'react/jsx-filename-extension': ['off'],
     'react/prop-types': ['off'],
@@ -37,5 +31,5 @@ module.exports = {
     'no-console': ['off'],
     'react/jsx-props-no-spreading': ['off'],
     '@typescript-eslint/no-explicit-any': ['off'],
-  }
-}
+  },
+};
