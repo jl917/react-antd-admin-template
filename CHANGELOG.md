@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/jl917/react-antd-admin-template/compare/v1.1.0...v1.1.1) (2021-11-27)
+
+
+### Bug Fixes
+
+* webpack관련 파일 제거 ([fc87677](https://github.com/jl917/react-antd-admin-template/commit/fc876772e7ac85099bed5714948b1914b7e9678b))
+
 # [1.1.0](https://github.com/jl917/react-antd-admin-template/compare/v1.0.19...v1.1.0) (2021-11-27)
 
 
