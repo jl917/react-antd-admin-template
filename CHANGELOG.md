@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/jl917/react-antd-admin-template/compare/v1.1.1...v1.1.2) (2021-11-27)
+
+
+### Bug Fixes
+
+* vite 번들 visualizer, 일부 수정 ([4f4766f](https://github.com/jl917/react-antd-admin-template/commit/4f4766f2836b2b82416c810ab66bda8e310693a3))
+
 ## [1.1.1](https://github.com/jl917/react-antd-admin-template/compare/v1.1.0...v1.1.1) (2021-11-27)
 
 
