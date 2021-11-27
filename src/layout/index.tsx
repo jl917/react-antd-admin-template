@@ -5,7 +5,7 @@ import Nav from './atoms/Nav';
 import GlobalHeader from './molecules/GlobalHeader';
 import GlobalFooter from './molecules/GlobalFooter';
 import { navIsShow } from '@/common/store/layout';
-import s from '@/layout/style.styl';
+import s from '@/layout/style.module.styl';
 
 const { Content, Sider } = Layout;
 

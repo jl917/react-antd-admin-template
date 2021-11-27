@@ -6,6 +6,7 @@ import atomEnv from '@/common/store/env';
 
 const PageNetwork = () => {
   const ENV = useRecoilValue(atomEnv);
+  console.log(ENV);
   const getUrl = async () => {
     const result = await axios.get('https://randomuser.me/api/');
     console.log(result);
@@ -23,6 +24,7 @@ const PageNetwork = () => {
   return (
     <>
       <div>env: {ENV.DB_HOST}</div>
+      {JSON.stringify(import.meta.env)}
       <div>
         <Button onClick={getUrl}>success</Button>
         <Button onClick={getUrl2}>error</Button>

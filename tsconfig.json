@@ -12,6 +12,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "outDir": "./_tmp/",
+    "noEmit": true,
     "moduleResolution": "Node",
     "typeRoots": [
       "./node_modules/@types",
@@ -22,7 +23,10 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "vite/client"
+    ]
   },
   "exclude": [
     "node_modules",

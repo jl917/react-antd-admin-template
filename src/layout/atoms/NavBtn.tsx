@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import { useRecoilState } from 'recoil';
 import { MenuOutlined } from '@ant-design/icons';
 import { navIsShow } from '@/common/store/layout';
-import s from '@/layout/style.styl';
+import s from '@/layout/style.module.styl';
 
 const NavBtn = () => {
   const [isShow, setIsShow] = useRecoilState(navIsShow);

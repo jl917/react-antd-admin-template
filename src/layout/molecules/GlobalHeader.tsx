@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Dropdown, Button } from 'antd';
-import s from '@/layout/style.styl';
+import s from '@/layout/style.module.styl';
 import NavBtn from '../atoms/NavBtn';
 
 const { Header } = Layout;

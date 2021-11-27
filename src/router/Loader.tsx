@@ -6,8 +6,10 @@ interface IWC {
   (path: string): React.FC;
 }
 
+const modules: any = import.meta.glob('../pages/*/*.tsx');
+
 const Loader: IWC = (path) => {
-  const Page = React.lazy(() => import(`@/pages${path}`));
+  const Page = React.lazy(modules[`../pages${path}/index.tsx`]);
   return () => (
     <Layout>
       <Suspense fallback={<Loading />}>

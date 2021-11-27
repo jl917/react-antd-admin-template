@@ -36,5 +36,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': ['off'],
     'no-console': ['off'],
     'react/jsx-props-no-spreading': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off'],
   }
 }
