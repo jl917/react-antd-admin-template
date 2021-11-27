@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/jl917/react-antd-admin-template/compare/v1.0.19...v1.1.0) (2021-11-27)
+
+
+### Features
+
+* webpack => vite 교체 ([709ce32](https://github.com/jl917/react-antd-admin-template/commit/709ce32103f70d36b1848d71957d689512af1a2a))
+
 ## [1.0.19](https://github.com/jl917/react-antd-admin-template/compare/v1.0.18...v1.0.19) (2021-11-19)
 
 

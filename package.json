@@ -1,6 +1,6 @@
 {
   "name": "react-antd-admin-template",
-  "version": "1.0.19",
+  "version": "1.1.0",
   "description": "react-antd-admin-template typescript",
   "scripts": {
     "dev": "vite --mode dev",
