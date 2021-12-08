@@ -1,15 +1,16 @@
 import React, { Suspense } from 'react';
-import Loading from '../common/atoms/Loading';
-import Layout from '@/layout';
+import Loading from '@/common/ui/atoms/Loading';
+import Layout from '@/common/ui/templates/Layout';
 
-interface IWC {
+interface IHOC {
   (path: string): React.FC;
 }
 
-const modules: any = import.meta.glob('../pages/*/*.tsx');
+const modules: any = import.meta.glob('../components/*/*.entry.tsx');
+console.log(modules);
 
-const Loader: IWC = (path) => {
-  const Page = React.lazy(modules[`../pages${path}/index.tsx`]);
+const Loader: IHOC = (path) => {
+  const Page = React.lazy(modules[`../components${path}.entry.tsx`]);
   return () => (
     <Layout>
       <Suspense fallback={<Loading />}>

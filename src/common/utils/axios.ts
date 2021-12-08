@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { notification } from 'antd';
 import NProgress from 'nprogress';
-import './nprogress.css';
+import 'nprogress/nprogress.css';
+import './__.css';
 
 const instance = axios.create({
   baseURL: '/',

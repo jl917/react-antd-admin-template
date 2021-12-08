@@ -11,4 +11,15 @@ module.exports = {
     '@/(.*)': '<rootDir>/src/$1',
   },
   setupFiles: ['<rootDir>/jest/setupFiles.js'],
+  coverageThreshold: {
+    global: {
+      branches: 5,
+      functions: 5,
+      lines: 5,
+      statements: 5,
+    }
+  },
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx}',
+  ]
 };
