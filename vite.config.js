@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
 import checker from 'vite-plugin-checker';
-import { visualizer } from 'rollup-plugin-visualizer';
 import replace from '@rollup/plugin-replace';
 import glob from 'glob';
 
@@ -13,7 +12,8 @@ const ROUTES = glob.sync('./src/pages/*/*.tsx').map(e => {
   return filterDirText.replace(`${isIndex ? '/index' : ''}.tsx`, '');
 });
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
+  const isLocal = mode === 'dev' && command === 'serve';
   const config = defineConfig({
     root: './src',
     build: {
@@ -25,9 +25,13 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, './src'),
       },
     },
-    plugins: [react(), replace({
-      'window.VAR_ROUTES': JSON.stringify(ROUTES),
-    })],
+    plugins: [
+      react(),
+      replace({
+        'window.VAR_ROUTES': JSON.stringify(ROUTES),
+        'window.IS_LOCAL': JSON.stringify(isLocal),
+      }),
+    ],
     css: {
       preprocessorOptions: {
         less: {
@@ -39,8 +43,8 @@ export default defineConfig(({ mode }) => {
       },
     },
   });
-
-  if (mode === 'dev') {
+  // local 모드일 경우
+  if (isLocal) {
     config.plugins.push(
       checker({
         typescript: true,
@@ -50,10 +54,6 @@ export default defineConfig(({ mode }) => {
         },
       }),
     );
-  }
-
-  if (mode === 'analyz') {
-    config.plugins.push(visualizer());
   }
 
   return config;
