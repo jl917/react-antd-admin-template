@@ -1,11 +1,11 @@
 const routes: IRouter[] = [
   {
     title: 'dashboard',
-    path: '/dashboard/index',
+    path: '/dashboard',
   },
   {
     title: 'form',
-    path: '/form/index',
+    path: '/form',
   },
   // {
   //   title: 'list',
@@ -37,7 +37,7 @@ const routes: IRouter[] = [
   // },
   {
     title: 'network',
-    path: '/network/index',
+    path: '/network',
   },
 ];
 

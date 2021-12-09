@@ -9,10 +9,6 @@ export const USE_YN = [
   },
 ];
 
-export const CHANNEL = [
-  
-];
+export const CHANNEL = [];
 
-export const LINK_TYPE = [
-  
-];
+export const LINK_TYPE = [];

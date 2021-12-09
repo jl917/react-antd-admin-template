@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PageNetwork = () => {
+const PageAAA = () => {
   return <>aaa page asdf</>;
 };
 
-export default PageNetwork;
+export default PageAAA;
