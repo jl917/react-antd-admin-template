@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/jl917/react-antd-admin-template/compare/v1.1.4...v1.1.5) (2021-12-09)
+
+
+### Bug Fixes
+
+* router 개선 ([729ebbe](https://github.com/jl917/react-antd-admin-template/commit/729ebbedba2fd8bc8fff0fa58c4ef27e6fdbc3fa))
+
 ## [1.1.4](https://github.com/jl917/react-antd-admin-template/compare/v1.1.3...v1.1.4) (2021-12-09)
 
 
