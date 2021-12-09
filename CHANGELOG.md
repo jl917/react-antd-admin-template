@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/jl917/react-antd-admin-template/compare/v1.1.3...v1.1.4) (2021-12-09)
+
+
+### Bug Fixes
+
+* lint & router set ([e29cd78](https://github.com/jl917/react-antd-admin-template/commit/e29cd78a0b578db572f93241db36940bb73628e6))
+
 ## [1.1.3](https://github.com/jl917/react-antd-admin-template/compare/v1.1.2...v1.1.3) (2021-12-08)
 
 
