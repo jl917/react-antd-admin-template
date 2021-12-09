@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
-import routes from '@/router/routes';
+import routes from './routes';
 
 const Nav = () => {
   const location = useLocation();

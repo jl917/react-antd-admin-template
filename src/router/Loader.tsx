@@ -3,7 +3,7 @@ import Loading from '@/common/ui/atoms/Loading';
 import Layout from '@/common/ui/templates/Layout';
 
 interface IHOC {
-  (path: string): React.FC;
+  (path: string): any;
 }
 
 const modulesMeta: any = import.meta.glob('../pages/*/*');
@@ -13,12 +13,9 @@ const modules = Object.keys(modulesMeta).reduce((m: any, p: string) => {
   return m;
 }, {});
 
-console.log(modules)
-
 const Loader: IHOC = (path) => {
-  console.log()
   const Page = React.lazy(modules[`../pages/${path}`]);
-  return () => (
+  return (
     <Layout>
       <Suspense fallback={<Loading />}>
         <Page />
