@@ -6,7 +6,7 @@ import replace from '@rollup/plugin-replace';
 import glob from 'glob';
 
 // TODO: 정규식 추가 개발 필요(tsx, jsx 지원)
-const ROUTES = glob.sync('./src/pages/*/*.tsx').map(e => {
+const ROUTES = glob.sync('./src/pages/**/*.tsx').map(e => {
   const filterDirText = e.replace('./src/pages/', '');
   const isIndex = filterDirText.endsWith('/index.tsx');
   return filterDirText.replace(`${isIndex ? '/index' : ''}.tsx`, '');

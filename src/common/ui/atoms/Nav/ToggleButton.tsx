@@ -9,7 +9,7 @@ const NavBtn = () => {
   const [isShow, setIsShow] = useRecoilState(navIsShow);
   const toggleNav = () => setIsShow(!isShow);
   return (
-    <div className={s.toggleBtn}>
+    <div className={s['toggle-btn']}>
       <Button icon={<MenuOutlined />} onClick={toggleNav} />
     </div>
   );

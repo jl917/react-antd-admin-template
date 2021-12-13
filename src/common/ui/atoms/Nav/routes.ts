@@ -39,6 +39,10 @@ const routes: IRouter[] = [
     title: 'network',
     path: '/network',
   },
+  {
+    title: 'pageb',
+    path: '/bbb',
+  },
 ];
 
 export default routes;

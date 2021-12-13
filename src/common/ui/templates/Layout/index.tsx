@@ -26,7 +26,7 @@ const Component: React.FC = ({ children }) => {
       <Layout className="site-layout">
         <Header />
         <Content className={s.content}>
-          <div className={s.contentLayout}>{children}</div>
+          <div className={s['content-layout']}>{children}</div>
         </Content>
         <Footer />
       </Layout>
