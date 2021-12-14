@@ -70,7 +70,6 @@
 ## Reference
 
 - https://vitejs.dev/
-- https://recoiljs.org/
 - https://eslint.org/
 - https://prettier.io/
 - https://www.npmjs.com/package/eslint-config-airbnb
@@ -80,5 +79,17 @@
 - https://testing-library.com/
 - https://typicode.github.io/husky/#/
 - https://github.com/elsewhencode/project-guidelines/blob/master/README-ko.md
-- https://sentry.io/
 - https://github.com/apple77y/javascript/tree/master/react
+
+
+## Dependence
+
+- https://day.js.org/
+- https://momentjs.com/
+- https://sentry.io/
+- https://ant.design
+- https://axios-http.com/
+- https://lodash.com/
+- https://reactjs.org
+- https://recoiljs.org/
+- https://reactrouter.com/
