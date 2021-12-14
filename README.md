@@ -50,7 +50,7 @@
 │  │  │  ├─validations          // 개별 유효성 체크
 │  │  │  ├─types                // 개별 타입
 │  │  │  ├─index.tsx            // 개별 intro
-│  │  │  ├─index.entry.tsx      // **라우팅 처리(src/pages폴더 삭제 가능)
+│  │  │  ├─*index.entry.tsx     // **라우팅 처리(src/pages폴더 삭제 가능)
 
 │  ├─pages                      // 라우팅 entry
 │  │  ├─apage                   // 프로젝트명.
@@ -79,5 +79,6 @@
 - https://jestjs.io/
 - https://testing-library.com/
 - https://typicode.github.io/husky/#/
-- https://github.com/elsewhencode/project-guidelines/blob/master/README-ko.md#some-git-rules
+- https://github.com/elsewhencode/project-guidelines/blob/master/README-ko.md
 - https://sentry.io/
+- https://github.com/apple77y/javascript/tree/master/react
