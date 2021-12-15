@@ -15,7 +15,7 @@ interface IHOC {
 
 const Loader: IHOC = (path) => {
   // vite import 오류
-  const Page = React.lazy(() => import(`../components/${path}`));
+  const Page = React.lazy(() => import(`../components/${path}/index.tsx`));
   return () => (
     <Layout>
       <Suspense fallback={<Loading />}>

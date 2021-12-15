@@ -18,7 +18,7 @@ const PageSample = () => {
     keepPreviousData: true,
     // initialData: {data: {data: {userId: 1, id: 1, title: 'sadfasd', completed: false}}}
   });
-  console.log(todoQuery)
+  console.log(todoQuery);
   return (
     <>
       <h1>User</h1>
@@ -32,19 +32,17 @@ const PageSample = () => {
         </Button>
       </div>
       <h1>Todo</h1>
-      <Button onClick={() => setId(id + 1)}>
-        +
-      </Button>
-      <Button onClick={() => setId(id - 1)}>
-        -
-      </Button>
+      <Button onClick={() => setId(id + 1)}>+</Button>
+      <Button onClick={() => setId(id - 1)}>-</Button>
       <Button onClick={() => todoQuery.refetch()} loading={todoQuery.isFetching}>
         getTodo
       </Button>
       {console.log(todoQuery.data)}
       <h2>{todoQuery.data?.data.title}</h2>
 
-      <h2 onClick={forceUpdate}>{value}</h2>
+      <button onClick={forceUpdate} type="button">
+        {value}
+      </button>
     </>
   );
 };

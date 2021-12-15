@@ -6,10 +6,10 @@ const routes = window.VAR_ROUTES;
 console.log(routes);
 
 const Apage = Loader('aaa');
-const DashboardPage = Loader('dashboard/index');
-const FormPage = Loader('form/index');
-const NetworkPage = Loader('network/index');
-const SamplePage = Loader('sample/index');
+const DashboardPage = Loader('dashboard');
+const FormPage = Loader('form');
+const NetworkPage = Loader('network');
+const SamplePage = Loader('sample');
 
 const Router: React.FC = () => (
   <BrowserRouter>

@@ -1,3 +1,3 @@
-export default function useDefault(){
+export default function useDefault() {
   console.log(123123);
 }

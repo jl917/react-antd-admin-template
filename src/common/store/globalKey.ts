@@ -10,4 +10,4 @@ export const globalKeyState = () => {
   const forceUpdate = () => setValue(value + 1);
 
   return { value, forceUpdate };
-}
+};

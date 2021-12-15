@@ -8,14 +8,12 @@ import s from './style.module.styl';
 const NavBtn = () => {
   const [isShow, setIsShow] = useRecoilState(atomShowNav);
   const toggleNav = () => setIsShow(!isShow);
-  const showNav = useRecoilValue(selectorShowNav)
+  const showNav = useRecoilValue(selectorShowNav);
   return (
     <div className={s['toggle-btn']}>
       <Button icon={<MenuOutlined />} onClick={toggleNav} />
-      <span style={{ color: 'white' }}>
-        {showNav}
-      </span>
-    </div >
+      <span style={{ color: 'white' }}>{showNav}</span>
+    </div>
   );
 };
 

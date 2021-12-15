@@ -7,5 +7,5 @@ export const atomShowNav = atom({
 
 export const selectorShowNav = selector({
   key: 'selectorShowNav',
-  get: ({ get }) => get(atomShowNav) ? '열림' : '닫힘'
+  get: ({ get }) => (get(atomShowNav) ? '열림' : '닫힘'),
 });
