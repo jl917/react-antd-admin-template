@@ -40,8 +40,8 @@ const routes: IRouter[] = [
     path: '/network',
   },
   {
-    title: 'pageb',
-    path: '/bbb',
+    title: 'sample',
+    path: '/sample',
   },
 ];
 

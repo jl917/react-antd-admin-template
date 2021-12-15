@@ -6,16 +6,17 @@ interface IHOC {
   (path: string): any;
 }
 
-const modulesMeta: any = import.meta.glob('../pages/*/*');
+// const modulesMeta: any = import.meta.glob('../pages/*/*');
 
-const modules = Object.keys(modulesMeta).reduce((m: any, p: string) => {
-  m[p.replace('/index.tsx', '').replace('.tsx', '')] = modulesMeta[p];
-  return m;
-}, {});
+// const modules = Object.keys(modulesMeta).reduce((m: any, p: string) => {
+//   m[p.replace('/index.tsx', '').replace('.tsx', '')] = modulesMeta[p];
+//   return m;
+// }, {});
 
 const Loader: IHOC = (path) => {
-  const Page = React.lazy(modules[`../pages/${path}`]);
-  return (
+  // vite import 오류
+  const Page = React.lazy(() => import(`../components/${path}`));
+  return () => (
     <Layout>
       <Suspense fallback={<Loading />}>
         <Page />

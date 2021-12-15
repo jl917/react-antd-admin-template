@@ -1,17 +1,21 @@
 import React from 'react';
 import { Button } from 'antd';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { MenuOutlined } from '@ant-design/icons';
-import { navIsShow } from '@/common/store/layout';
+import { atomShowNav, selectorShowNav } from '@/common/store/layout';
 import s from './style.module.styl';
 
 const NavBtn = () => {
-  const [isShow, setIsShow] = useRecoilState(navIsShow);
+  const [isShow, setIsShow] = useRecoilState(atomShowNav);
   const toggleNav = () => setIsShow(!isShow);
+  const showNav = useRecoilValue(selectorShowNav)
   return (
     <div className={s['toggle-btn']}>
       <Button icon={<MenuOutlined />} onClick={toggleNav} />
-    </div>
+      <span style={{ color: 'white' }}>
+        {showNav}
+      </span>
+    </div >
   );
 };
 

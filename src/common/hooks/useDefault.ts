@@ -1,3 +1,3 @@
-/**
- * hook 작성.
- */
+export default function useDefault(){
+  console.log(123123);
+}

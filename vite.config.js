@@ -28,7 +28,7 @@ export default defineConfig(({ mode, command }) => {
     plugins: [
       react(),
       replace({
-        'window.VAR_ROUTES': JSON.stringify(ROUTES),
+        // 'window.VAR_ROUTES': JSON.stringify(ROUTES),
         'window.IS_LOCAL': JSON.stringify(isLocal),
       }),
     ],

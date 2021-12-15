@@ -1,11 +1,9 @@
 import React from 'react';
-import { useRecoilValue } from 'recoil';
 import { Button } from 'antd';
 import axios from '@/common/utils/axios';
-import atomEnv from '@/common/store/env';
+import * as ENV from '@/common/constants/env';
 
 const PageNetwork = () => {
-  const ENV = useRecoilValue(atomEnv);
   console.log(ENV);
   const getUrl = async () => {
     const result = await axios.get('https://randomuser.me/api/');

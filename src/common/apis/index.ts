@@ -1,4 +1,8 @@
-const abc = '';
+import { getUser, getUser404 } from './user';
+import { getTodo } from './todo';
 
-// 여기 코드
-console.log(abc);
+export {
+  getUser,
+  getUser404,
+  getTodo,
+};

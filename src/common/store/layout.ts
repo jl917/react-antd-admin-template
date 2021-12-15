@@ -1,8 +1,11 @@
-import { atom } from 'recoil';
+import { atom, selector } from 'recoil';
 
-export const navIsShow = atom({
-  key: 'navIsShow',
+export const atomShowNav = atom({
+  key: 'atomShowNav',
   default: true,
 });
 
-export const a = true;
+export const selectorShowNav = selector({
+  key: 'selectorShowNav',
+  get: ({ get }) => get(atomShowNav) ? '열림' : '닫힘'
+});
