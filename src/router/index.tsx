@@ -2,14 +2,15 @@ import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import Loader from './Loader';
 
-const routes = window.VAR_ROUTES;
-console.log(routes);
+// const routes = window.VAR_ROUTES;
+// console.log(routes);
 
 const Apage = Loader('aaa');
 const DashboardPage = Loader('dashboard');
 const FormPage = Loader('form');
 const NetworkPage = Loader('network');
 const SamplePage = Loader('sample');
+const QueryPage = Loader('query');
 
 const Router: React.FC = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const Router: React.FC = () => (
         <Route path="form" element={<FormPage />} />
         <Route path="network" element={<NetworkPage />} />
         <Route path="sample" element={<SamplePage />} />
+        <Route path="query" element={<QueryPage />} />
       </Route>
     </Routes>
   </BrowserRouter>

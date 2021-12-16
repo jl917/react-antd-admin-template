@@ -43,6 +43,10 @@ const routes: IRouter[] = [
     title: 'sample',
     path: '/sample',
   },
+  {
+    title: 'query',
+    path: '/query',
+  },
 ];
 
 export default routes;
