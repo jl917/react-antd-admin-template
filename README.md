@@ -49,8 +49,7 @@
 │  │  │  ├─utils                // 개별
 │  │  │  ├─validations          // 개별 유효성 체크
 │  │  │  ├─types                // 개별 타입
-│  │  │  ├─index.tsx            // 개별 intro
-│  │  │  ├─index.page.tsx       // 라우팅 생성 (/apage or /apage/index)
+│  │  │  ├─about.page.tsx       // 라우팅 생성 (/apage or /apage/index)
 │  │  │  ├─index.page.tsx       // 라우팅 생성 (/apage or /apage/index)
 
 │  ├─provider                   // provider 정의(recoil, react-query, redux등등 정의)
@@ -72,6 +71,8 @@
 #### ./jest
 
 jest 관련된 설정 파일(fileMock, setupFiles)이 포함되고 ./jest/expect 에 필요한 확장기능을 추가한다.(js로 추천)
+
+test는 모든 파일 검사를 원칙으로 하고 각 파일과 함께 작성해준다.(예: `index.test.tsx`)
 
 #### ./env.*
 
