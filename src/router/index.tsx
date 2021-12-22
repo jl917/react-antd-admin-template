@@ -6,7 +6,7 @@ const modules = import.meta.glob('../components/**/*.page.tsx'); // 무조건 st
 
 const routes = Object.keys(modules).reduce((m: any, p: string) => {
   let entry = p.replace('../components', '');
-  const endFixPage = '.page.tsx'
+  const endFixPage = '.page.tsx';
   if (entry.endsWith(endFixPage)) {
     entry = entry.slice(0, -9);
   }
@@ -24,11 +24,9 @@ const Router: React.FC = () => (
   <BrowserRouter>
     <Routes>
       <Route index element={Loader(() => import('../components/dashboard/index.page'))} />
-      {
-        Object.entries(routes).map(
-          ([path, page]) => <Route path={path} key={path} element={Loader(page)} />
-        )
-      }
+      {Object.entries(routes).map(([path, page]) => (
+        <Route path={path} key={path} element={Loader(page)} />
+      ))}
     </Routes>
   </BrowserRouter>
 );

@@ -5,5 +5,5 @@ export const getPosts = () => {
 };
 
 export const addPost: any = (data: any) => {
-  return axios({ url: 'http://localhost:9999/add', method: 'post', data, });
+  return axios({ url: 'http://localhost:9999/add', method: 'post', data });
 };

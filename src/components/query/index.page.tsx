@@ -4,16 +4,16 @@ import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { getPosts, addPost } from '@/common/apis';
 
 const PageQuery = () => {
-  const queryClient = useQueryClient()
+  const queryClient = useQueryClient();
 
   const postMutation: any = useMutation(addPost, {
-    onSuccess: (data) => {
-      console.log(queryClient)
-      console.log('success')
-      queryClient.setQueryData('posts', 'daolang')
-      console.log(a)
-    }
-  })
+    onSuccess: () => {
+      console.log(queryClient);
+      console.log('success');
+      queryClient.setQueryData('posts', 'daolang');
+      console.log(a);
+    },
+  });
 
   const postQuery = useQuery('posts', getPosts, {
     keepPreviousData: true,
@@ -21,8 +21,8 @@ const PageQuery = () => {
   });
 
   const changePost = () => {
-    postMutation.mutate({id: 3})
-  }
+    postMutation.mutate({ id: 3 });
+  };
 
   return (
     <div style={{ textAlign: 'left', background: '#fff' }}>
@@ -40,7 +40,7 @@ const PageQuery = () => {
         renderItem={(item: any) => (
           <List.Item>
             <Typography.Text>{item.id}</Typography.Text> {item.title}
-            <Button size='small' onClick={changePost} loading={postQuery.isFetching}>
+            <Button size="small" onClick={changePost} loading={postQuery.isFetching}>
               수정
             </Button>
           </List.Item>
