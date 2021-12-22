@@ -2,25 +2,33 @@ import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import Loader from './Loader';
 
-// const routes = window.VAR_ROUTES;
-// console.log(routes);
-const Apage = Loader('aaa');
-const DashboardPage = Loader('dashboard');
-const FormPage = Loader('form');
-const NetworkPage = Loader('network');
-const SamplePage = Loader('sample');
-const QueryPage = Loader('query');
+const modules = import.meta.glob('../components/**/*.page.tsx'); // 무조건 string
+
+const routes = Object.keys(modules).reduce((m: any, p: string) => {
+  let entry = p.replace('../components', '');
+  const endFixPage = '.page.tsx'
+  if (entry.endsWith(endFixPage)) {
+    entry = entry.slice(0, -9);
+  }
+  m[entry] = modules[p];
+
+  const endFixIndex = '/index';
+  if (entry.endsWith(endFixIndex)) {
+    entry = entry.slice(0, -5);
+  }
+  m[entry] = modules[p];
+  return m;
+}, {});
 
 const Router: React.FC = () => (
   <BrowserRouter>
     <Routes>
-      <Route index element={<DashboardPage />} />
-      <Route path="dashboard" element={<DashboardPage />} />
-      <Route path="form" element={<FormPage />} />
-      <Route path="network" element={<NetworkPage />} />
-      <Route path="sample" element={<SamplePage />} />
-      <Route path="query" element={<QueryPage />} />
-      <Route path="aaa" element={<Apage />} />
+      <Route index element={Loader(() => import('../components/dashboard/index.page'))} />
+      {
+        Object.entries(routes).map(
+          ([path, page]) => <Route path={path} key={path} element={Loader(page)} />
+        )
+      }
     </Routes>
   </BrowserRouter>
 );

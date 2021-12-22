@@ -28,7 +28,7 @@
 ├─src                           // source 디렉토리
 │  ├─common                     // 공통영역
 │  │  ├─apis                    // 공통 http요청 관리
-│  │  ├─constants               // 공통 const 관리 
+│  │  ├─constants               // 공통 const 관리
 │  │  ├─domains                 // 공통 api req, res데이터 변환.
 │  │  ├─hooks                   // 공통 hooks(usePermission, useUserName)
 │  │  ├─store                   // 공통 상태 관리
@@ -40,7 +40,7 @@
 │  ├─components                 // 서비스별 컴포넌트
 │  │  ├─apage                   // 프로젝트명.
 │  │  │  ├─apis                 // 개별 http요청 관리
-│  │  │  ├─constants            // 개별 const 관리 
+│  │  │  ├─constants            // 개별 const 관리
 │  │  │  ├─domains              // 개별 api req, res데이터 변환.
 │  │  │  ├─hooks                // 개별 hooks(usePermission, useUserName)
 │  │  │  ├─store                // 개별 상태 관리
@@ -50,10 +50,8 @@
 │  │  │  ├─validations          // 개별 유효성 체크
 │  │  │  ├─types                // 개별 타입
 │  │  │  ├─index.tsx            // 개별 intro
-│  │  │  ├─*index.entry.tsx     // **라우팅 처리(src/pages폴더 삭제 가능)
-
-│  ├─pages                      // 라우팅 entry
-│  │  ├─apage                   // 프로젝트명.
+│  │  │  ├─index.page.tsx       // 라우팅 생성 (/apage or /apage/index)
+│  │  │  ├─index.page.tsx       // 라우팅 생성 (/apage or /apage/index)
 
 │  ├─provider                   // provider 정의(recoil, react-query, redux등등 정의)
 │  │  ├─Recoil.tsx              // recoil Provider정의
@@ -79,9 +77,9 @@ jest 관련된 설정 파일(fileMock, setupFiles)이 포함되고 ./jest/expect
 
 각환경별 분기가 필요한 변수를 선언하고 ./src/components/constants/env.ts 에서 재정의 해서 사용한다.
 
-#### router
+#### ./src/components/**/*.page.tsx
 
-개발중...
+components폴더내에 라우팅이 필요한 부분은 `.page.tsx` postFix를 추가해주면 자동으로 라우팅을 잡아준다.
 
 #### ./src/provider/
 
