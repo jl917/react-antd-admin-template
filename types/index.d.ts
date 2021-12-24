@@ -3,6 +3,11 @@ declare module '*.styl' {
   export default classname;
 }
 
+declare module '*.stylus' {
+  const classname: { readonly [key: string]: string };
+  export default classname;
+}
+
 declare module '*.less' {
   const classname: { readonly [key: string]: string };
   export default classname;

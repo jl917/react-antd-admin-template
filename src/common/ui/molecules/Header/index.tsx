@@ -16,7 +16,7 @@ const ContentHeader: React.FC = () => {
     <Header className={s.header}>
       <ToggleButton />
       <Dropdown overlay={menu} placement="bottomLeft">
-        <Button type="text" size="large" className={s.headerNav}>
+        <Button type="text" size="large" className={s['header-nav']}>
           lang~
         </Button>
       </Dropdown>

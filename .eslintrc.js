@@ -31,5 +31,6 @@ module.exports = {
     'no-console': ['off'],
     'react/jsx-props-no-spreading': ['off'],
     '@typescript-eslint/no-explicit-any': ['off'],
+    'import/prefer-default-export': ['off'],
   },
 };
