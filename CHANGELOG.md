@@ -1,3 +1,20 @@
+## [1.1.6](https://github.com/jl917/react-antd-admin-template/compare/v1.1.5...v1.1.6) (2021-12-24)
+
+
+### Bug Fixes
+
+* dependence url 추가 ([26ff647](https://github.com/jl917/react-antd-admin-template/commit/26ff647f69112f155e99d2ad5c303447862e1492))
+* lint 수정 및 entry삭제 ([baf6247](https://github.com/jl917/react-antd-admin-template/commit/baf62473342c4fda703c802286959186d2f6c6dc))
+* react-query 적용 ([e9ef277](https://github.com/jl917/react-antd-admin-template/commit/e9ef2779e1742e6e25195842d8514257ae053447))
+* react-query초기 설정, local모드일 경우 devtool 추가 ([1a10ac5](https://github.com/jl917/react-antd-admin-template/commit/1a10ac514abda6c07722d671b60f015d0b5a066a))
+* readme 업데이트 ([e2888ab](https://github.com/jl917/react-antd-admin-template/commit/e2888abc16b1ab6fc2d13d2d0662afc199b9e8cd))
+* router import 임시 해결 ([c88391a](https://github.com/jl917/react-antd-admin-template/commit/c88391a666c11f34245a79f151be2e1918c62ddf))
+* stylelint추가 및 적용,  폴더 구조 변경 ([2edd432](https://github.com/jl917/react-antd-admin-template/commit/2edd432264dc21d917a43256b47eb370d5b85ff5))
+* 라우터 수정 ([7cf251a](https://github.com/jl917/react-antd-admin-template/commit/7cf251ad1ff46f4ebb1bfb4323a181d108d05cae))
+* 라우팅 개발 ([4ac2a65](https://github.com/jl917/react-antd-admin-template/commit/4ac2a657aed58a133079a3d1bb27d7634b5560e7)), closes [#9](https://github.com/jl917/react-antd-admin-template/issues/9)
+* 오타 수정 ([afdf569](https://github.com/jl917/react-antd-admin-template/commit/afdf56908b5720806781018d750a409c72a3fa87))
+* 폴더별 설명 추가 ([0c32cd1](https://github.com/jl917/react-antd-admin-template/commit/0c32cd1e63f0920fe46e9d73f9c0bfd61f1f5eea))
+
 ## [1.1.5](https://github.com/jl917/react-antd-admin-template/compare/v1.1.4...v1.1.5) (2021-12-09)
 
 
