@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from 'antd';
 import { useQuery } from 'react-query';
 import { getUser, getUser404, getTodo } from '@/common/apis';
 import { globalKeyState } from '@/common/store/globalKey';
@@ -24,19 +23,23 @@ const PageSample = () => {
       <h1>User</h1>
       {userQuery.data?.data.results[0].email}
       <div>
-        <Button onClick={() => userQuery.refetch()} loading={userQuery.isFetching}>
+        <button onClick={() => userQuery.refetch()} type="button">
           getUser
-        </Button>
-        <Button onClick={() => user404Query.refetch()} loading={user404Query.isFetching}>
+        </button>
+        <button onClick={() => user404Query.refetch()} type="button">
           getUser404
-        </Button>
+        </button>
       </div>
       <h1>Todo</h1>
-      <Button onClick={() => setId(id + 1)}>+</Button>
-      <Button onClick={() => setId(id - 1)}>-</Button>
-      <Button onClick={() => todoQuery.refetch()} loading={todoQuery.isFetching}>
+      <button onClick={() => setId(id + 1)} type="button">
+        +
+      </button>
+      <button onClick={() => setId(id - 1)} type="button">
+        -
+      </button>
+      <button onClick={() => todoQuery.refetch()} type="button">
         getTodo
-      </Button>
+      </button>
       {console.log(todoQuery.data)}
       <h2>{todoQuery.data?.data.title}</h2>
 

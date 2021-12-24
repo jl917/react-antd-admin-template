@@ -1,7 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { MenuOutlined } from '@ant-design/icons';
 import { atomShowNav, selectorShowNav } from '@/common/store/layout';
 import s from './style.module.styl';
 
@@ -11,7 +9,9 @@ const NavBtn = () => {
   const showNav = useRecoilValue(selectorShowNav);
   return (
     <div className={s['toggle-btn']}>
-      <Button icon={<MenuOutlined />} onClick={toggleNav} />
+      <button onClick={toggleNav} type="button">
+        toggle
+      </button>
       <span style={{ color: 'white' }}>{showNav}</span>
     </div>
   );

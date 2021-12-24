@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'antd';
 import axios from '@/common/utils/axios';
 import * as ENV from '@/common/constants/env';
 
@@ -24,9 +23,15 @@ const PageNetwork = () => {
       <div>env: {ENV.DB_HOST}</div>
       {JSON.stringify(import.meta.env)}
       <div>
-        <Button onClick={getUrl}>success</Button>
-        <Button onClick={getUrl2}>error</Button>
-        <Button onClick={throwError}>throw error</Button>
+        <button onClick={getUrl} type="button">
+          success
+        </button>
+        <button onClick={getUrl2} type="button">
+          error
+        </button>
+        <button onClick={throwError} type="button">
+          throw error
+        </button>
       </div>
     </>
   );

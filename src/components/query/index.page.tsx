@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, List, Typography } from 'antd';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { getPosts, addPost } from '@/common/apis';
 
@@ -27,25 +26,23 @@ const PageQuery = () => {
   return (
     <div style={{ textAlign: 'left', background: '#fff' }}>
       <h1>posts</h1>
-      <Button onClick={() => postQuery.refetch()} loading={postQuery.isFetching}>
+      <button onClick={() => postQuery.refetch()} type="button">
         getposts
-      </Button>
-      <Button onClick={changePost} loading={postQuery.isFetching}>
+      </button>
+      <button onClick={changePost} type="button">
         getposts
-      </Button>
+      </button>
       {console.log(postQuery.data?.data)}
-      <List
-        bordered
-        dataSource={postQuery.data?.data || []}
-        renderItem={(item: any) => (
-          <List.Item>
-            <Typography.Text>{item.id}</Typography.Text> {item.title}
-            <Button size="small" onClick={changePost} loading={postQuery.isFetching}>
+      <ul>
+        {(postQuery.data?.data || []).map(({ id, title }: any) => (
+          <li>
+            {id} - {title}
+            <button onClick={changePost} type="button">
               수정
-            </Button>
-          </List.Item>
-        )}
-      />
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

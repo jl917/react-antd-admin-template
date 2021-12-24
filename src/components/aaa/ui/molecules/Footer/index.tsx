@@ -1,13 +1,12 @@
 import React from 'react';
-import { Layout, Button } from 'antd';
 import s from './style.module.styl';
 
 const Footer = () => (
-  <Layout.Footer className={s.footer}>
-    <Button type="link" href="#">
+  <div className={s.footer}>
+    <a type="link" href="#a">
       send mail to master
-    </Button>
-  </Layout.Footer>
+    </a>
+  </div>
 );
 
 export default Footer;

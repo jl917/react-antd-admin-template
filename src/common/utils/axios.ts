@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { notification } from 'antd';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -17,10 +16,11 @@ instance.interceptors.request.use(
   },
   (error) => {
     NProgress.done();
-    notification.error({
-      message: 'error',
-      description: 'Request Error',
-    });
+    alert('Request Error');
+    // notification.error({
+    //   message: 'error',
+    //   description: 'Request Error',
+    // });
     return Promise.reject(error);
   },
 );
@@ -33,10 +33,12 @@ instance.interceptors.response.use(
   },
   (error) => {
     NProgress.done();
-    notification.error({
-      message: error.response.status,
-      description: `${error.response.data}(Detail see devTool)`,
-    });
+    alert(`${error.response.data}(Detail see devTool)`);
+
+    // notification.error({
+    //   message: error.response.status,
+    //   description: ,
+    // });
     return Promise.reject(error);
   },
 );
