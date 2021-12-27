@@ -1,23 +1,8 @@
 import React from 'react';
-import { useMutation, useQuery, useQueryClient } from 'react-query';
-import { getPosts, addPost } from '@/common/apis';
+import sampleQuery from './query';
 
 const PageQuery = () => {
-  const queryClient = useQueryClient();
-
-  const postMutation: any = useMutation(addPost, {
-    onSuccess: () => {
-      console.log(queryClient);
-      console.log('success');
-      queryClient.setQueryData('posts', 'daolang');
-      console.log(a);
-    },
-  });
-
-  const postQuery = useQuery('posts', getPosts, {
-    keepPreviousData: true,
-    enabled: false,
-  });
+const { postQuery, postMutation} = sampleQuery();
 
   const changePost = () => {
     postMutation.mutate({ id: 3 });
@@ -32,10 +17,9 @@ const PageQuery = () => {
       <button onClick={changePost} type="button">
         getposts
       </button>
-      {console.log(postQuery.data?.data)}
       <ul>
         {(postQuery.data?.data || []).map(({ id, title }: any) => (
-          <li>
+          <li key={id}>
             {id} - {title}
             <button onClick={changePost} type="button">
               수정
