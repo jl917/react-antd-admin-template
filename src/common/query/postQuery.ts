@@ -12,12 +12,12 @@ const postQuery = () => {
   const add: any = useMutation(addPost, {
     onSuccess: (response: any) => {
       queryClient.setQueryData('posts', (oldData: any) => {
-        return { ...oldData, data: [...oldData?.data || [], response.data] }
+        return { ...oldData, data: [...(oldData?.data || []), response.data] };
       });
     },
   });
 
-  return { add, query }
-}
+  return { add, query };
+};
 
 export default postQuery;
