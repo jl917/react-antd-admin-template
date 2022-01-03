@@ -3,14 +3,13 @@ import { Button, List, Typography } from 'antd';
 import postQuery from '@/common/query/postQuery';
 
 const PageQuery = () => {
-
   const { add, query } = postQuery();
 
   const addPost = () => {
     add.mutate({
-      body: "101 contents",
+      body: '101 contents',
       id: 101,
-      title: "new title",
+      title: 'new title',
       userId: 1,
     });
   };
