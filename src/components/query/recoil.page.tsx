@@ -6,9 +6,6 @@ const PageQuery = () => {
 
   const { get, posts, add } = postQuery();
 
-  console.log(posts)
-
-
   const addPost = () => {
     add({
       body: "101 contents",

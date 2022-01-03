@@ -9,16 +9,14 @@ const postAtom = atom({
 const postQueryRecoil = () => {
   const [posts, setPosts] = useRecoilState<any>(postAtom);
 
-  const get = () => {
-    getPosts().then((res) => {
-      setPosts(res.data);
-    })
+  const get = async () => {
+    const res = await getPosts();
+    setPosts(res.data);
   }
 
-  const add = (data: any) => {
-    addPost(data).then((res: any) => {
-      setPosts([...posts, res.data]);
-    })
+  const add = async (data: any) => {
+    const res = await addPost(data);
+    setPosts([...posts, res.data]);
   }
 
   return { posts, get, add }
