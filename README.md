@@ -32,7 +32,7 @@
 │  │  ├─domains                 // 공통 api req, res데이터 변환.
 │  │  ├─hooks                   // 공통 hooks(usePermission, useUserName)
 │  │  ├─store                   // 공통 상태 관리
-│  │  ├─query????               // 공통 http 상태 관리??
+│  │  ├─query                   // 공통 http 상태 관리
 │  │  ├─ui                      // 공통 ui(atomic디자인)
 │  │  ├─utils                   // 공통 유틸
 │  │  ├─validations             // 공통 유효성 체크
@@ -44,7 +44,7 @@
 │  │  │  ├─domains              // 개별 api req, res데이터 변환.
 │  │  │  ├─hooks                // 개별 hooks(usePermission, useUserName)
 │  │  │  ├─store                // 개별 상태 관리
-│  │  │  ├─query????            // 개별 http 상태 관리??
+│  │  │  ├─query                // 개별 http 상태 관리
 │  │  │  ├─ui                   // 개별 ui(atomic디자인)
 │  │  │  ├─utils                // 개별
 │  │  │  ├─validations          // 개별 유효성 체크
@@ -92,7 +92,7 @@ components폴더내에 라우팅이 필요한 부분은 `.page.tsx` postFix를 �
 
 #### ./src/common/apis/
 
-필요한 요청은 전부 apis를 통해서 서버로 통신한다. 각 주제별 별도의 파일로 관리를 하고 index에 관련된 모듈을 수동 매핑해서 사용한다.
+필요한 요청은 전부 apis를 통해서 서버로 통신한다. 각 주제별 별도의 파일로 관리를 한다.
 
 #### ./src/common/constants/
 
@@ -100,7 +100,7 @@ components폴더내에 라우팅이 필요한 부분은 `.page.tsx` postFix를 �
 
 #### ./src/common/domains/
 
-통신관련 데이터 변환시 필요한 로직처리 한다. 각 주제별 별도의 파일로 관리를 하고 index에 관련된 모듈을 수동 매핑해서 사용한다.
+통신관련 데이터 변환시 필요한 로직처리 한다. 각 주제별 별도의 파일로 관리를 한다.
 
 #### ./src/common/hooks/
 
@@ -108,7 +108,7 @@ react hook 관련 부분을 처리한다. 파일명은 use prefix로 시작한�
 
 #### ./src/common/query/
 
-준비중......
+react-query 또는 cache관련된 작업을 진행한다.
 
 #### ./src/common/store/
 
