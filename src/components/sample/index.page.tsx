@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import { getUser, getUser404, getTodo } from '@/common/apis';
+import { getUser, getUser404, } from '@/common/apis/user';
+import { getTodo } from '@/common/apis/todo';
 import { globalKeyState } from '@/common/store/globalKey';
 
 const PageSample = () => {

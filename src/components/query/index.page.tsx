@@ -1,32 +1,42 @@
 import React from 'react';
-import sampleQuery from './query';
+import { Button, List, Typography } from 'antd';
+import postQuery from '@/common/query/postQuery';
 
 const PageQuery = () => {
-const { postQuery, postMutation} = sampleQuery();
 
-  const changePost = () => {
-    postMutation.mutate({ id: 3 });
+  const { add, query } = postQuery();
+
+  const addPost = () => {
+    add.mutate({
+      body: "101 contents",
+      id: 101,
+      title: "new title",
+      userId: 1,
+    });
   };
 
   return (
     <div style={{ textAlign: 'left', background: '#fff' }}>
       <h1>posts</h1>
-      <button onClick={() => postQuery.refetch()} type="button">
+      <Button onClick={() => query.refetch()} loading={query.isFetching}>
         getposts
-      </button>
-      <button onClick={changePost} type="button">
-        getposts
-      </button>
-      <ul>
-        {(postQuery.data?.data || []).map(({ id, title }: any) => (
-          <li key={id}>
-            {id} - {title}
-            <button onClick={changePost} type="button">
-              수정
-            </button>
-          </li>
-        ))}
-      </ul>
+      </Button>
+      <Button onClick={addPost} loading={query.isFetching}>
+        add
+      </Button>
+      {console.log(postQuery)}
+      <List
+        bordered
+        dataSource={query.data?.data || []}
+        renderItem={(item: any) => (
+          <List.Item>
+            <Typography.Text>{item.id}</Typography.Text> {item.title}
+            <Button size="small" onClick={addPost} loading={query.isFetching}>
+              추가
+            </Button>
+          </List.Item>
+        )}
+      />
     </div>
   );
 };
