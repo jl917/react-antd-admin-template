@@ -47,6 +47,10 @@ const routes: IRouter[] = [
     title: 'query',
     path: '/query',
   },
+  {
+    title: 'query-recoil',
+    path: '/query/recoil',
+  },
 ];
 
 export default routes;
