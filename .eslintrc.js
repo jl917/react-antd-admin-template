@@ -8,7 +8,7 @@ module.exports = {
     useJSXTextNode: true
   },
   plugins: ['@typescript-eslint', 'prettier'],
-  extends: ["airbnb", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "plugin:storybook/recommended"],
+  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     node: true,

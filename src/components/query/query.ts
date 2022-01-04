@@ -15,7 +15,7 @@ const sampleQuery = () => {
     enabled: false,
   });
 
-  return { postQuery, postMutation }
-}
+  return { postQuery, postMutation };
+};
 
 export default sampleQuery;

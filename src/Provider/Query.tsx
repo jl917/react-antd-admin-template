@@ -2,8 +2,6 @@ import React from 'react';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
-const isLocal = window.IS_LOCAL;
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -18,7 +16,7 @@ const queryClient = new QueryClient({
 const Query: React.FC = ({ children }) => (
   <QueryClientProvider client={queryClient}>
     {children}
-    <ReactQueryDevtools initialIsOpen={isLocal} />
+    <ReactQueryDevtools initialIsOpen={window.IS_LOCAL} />
   </QueryClientProvider>
 );
 
