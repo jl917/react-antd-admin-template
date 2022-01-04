@@ -1,3 +1,16 @@
+## [1.1.7](https://github.com/jl917/react-antd-admin-template/compare/v1.1.6...v1.1.7) (2022-01-04)
+
+
+### Bug Fixes
+
+* immer install ([1cfdd39](https://github.com/jl917/react-antd-admin-template/commit/1cfdd398b6e0a82754e6aa54027986903c361fc8))
+* lint ([8ed405e](https://github.com/jl917/react-antd-admin-template/commit/8ed405e2210676279805a301d98af1117013c49c))
+* query sample ([f7104c4](https://github.com/jl917/react-antd-admin-template/commit/f7104c4495a0d52586f7d3d3a38aab8d17053379))
+* recoil query 샘플링 ([776ea87](https://github.com/jl917/react-antd-admin-template/commit/776ea871a23aa7d22865bceaf4ca3ea431fb74fc))
+* recoil정리 ([d6aebf4](https://github.com/jl917/react-antd-admin-template/commit/d6aebf4e7d965eb4847067db55070d010c6b1c29))
+* story book 추가 ([92b7ee6](https://github.com/jl917/react-antd-admin-template/commit/92b7ee65564b8d2141c21ac7813db183447fb141))
+* 패키지 정리 ([18b5aba](https://github.com/jl917/react-antd-admin-template/commit/18b5aba470f397d80cfe4153e669b890ca71fd2a))
+
 ## [1.1.6](https://github.com/jl917/react-antd-admin-template/compare/v1.1.5...v1.1.6) (2021-12-24)
 
 
