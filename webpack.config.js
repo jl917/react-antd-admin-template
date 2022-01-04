@@ -7,6 +7,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const path = require('path');
+const glob = require("glob");
 
 const isLocal = process.env.NODE_ENV === 'local';
 
@@ -19,7 +20,7 @@ let config = {
   resolve: {
     alias: {
       "@": path.resolve(__dirname, './src'),
-      process: "process/browser",
+      // process: "process/browser",
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
@@ -86,7 +87,7 @@ let config = {
     }),
     new webpack.DefinePlugin({
       'window.IS_LOCAL': JSON.stringify(isLocal),
-      'window.ROUTES': JSON.stringify([]),
+      'window.ROUTES': JSON.stringify(getRoutes()),
     })
   ],
   optimization: {
@@ -110,6 +111,7 @@ if (process.env.NODE_ENV === 'local') {
         directory: path.join(__dirname, 'dist'),
       },
       hot: true,
+      port: 3001,
       host: 'localhost', // 'localhost',//host: '192.168.0.57',
       historyApiFallback: true,
       compress: true,
@@ -129,6 +131,28 @@ if (process.env.NODE_ENV === 'local') {
     loader: 'source-map-loader',
     exclude: /node_modules/,
   });
+}
+
+function getRoutes(){
+  const files = glob.sync("./src/components/**/*.page.tsx");
+  return files.reduce((routes, pagePath) => {
+    pagePath = pagePath.replace('./src', '..')
+    let entry = pagePath.replace('./components', '');
+  
+    const endFixPage = '.page.tsx';
+    if (entry.endsWith(endFixPage)) {
+      entry = entry.slice(0, -9);
+    }
+    routes[entry] = pagePath;
+  
+    const endFixIndex = '/index';
+    if (entry.endsWith(endFixIndex)) {
+      entry = entry.slice(0, -6);
+    }
+    routes[entry] = pagePath;
+  
+    return routes;
+  }, {});
 }
 
 module.exports = config;

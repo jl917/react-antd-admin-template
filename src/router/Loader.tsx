@@ -6,9 +6,9 @@ interface ILoader {
   (page: any): any;
 }
 
-const Loader: ILoader = (page) => {
-  const Page = React.lazy(page);
-  // const Page = React.lazy(() => import('../components/aaa/index.page.tsx'));
+const Loader: ILoader = (elementPath) => {
+  // const Page = React.lazy(page);
+  const Page = React.lazy(() => import(elementPath));
   return (
     <Layout>
       <Suspense fallback={<Loading />}>

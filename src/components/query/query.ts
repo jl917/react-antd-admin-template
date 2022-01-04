@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from 'react-query';
-import { getPosts, addPost } from '@/common/apis';
+import { getPosts, addPost } from '@/common/apis/posts';
 
 const sampleQuery = () => {
   const queryClient = useQueryClient();

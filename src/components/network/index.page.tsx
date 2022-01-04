@@ -21,7 +21,6 @@ const PageNetwork = () => {
   return (
     <>
       <div>env: {ENV.DB_HOST}</div>
-      {JSON.stringify(import.meta.env)}
       <div>
         <button onClick={getUrl} type="button">
           success
