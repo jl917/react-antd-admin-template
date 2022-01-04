@@ -1,5 +1,6 @@
-console.log(process.env);
-export const DB_HOST = 'import.meta.env.VITE_DB_HOST as string;';
-export const NAME = 'import.meta.env.VITE_NAME as string;';
-export const API_URL_USER = 'import.meta.env.VITE_API_URL_USER as string;';
-export const API_URL_TODO = 'import.meta.env.VITE_API_URL_TODO as string;';
+/* eslint-disable */
+export const DB_HOST = process.env.DB_HOST;
+export const NAME = process.env.NAME;
+export const API_URL_USER = process.env.API_URL_USER;
+export const API_URL_TODO = process.env.API_URL_TODO;
+/* eslint-enable */

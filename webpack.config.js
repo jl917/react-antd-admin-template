@@ -20,7 +20,7 @@ let config = {
   resolve: {
     alias: {
       "@": path.resolve(__dirname, './src'),
-      // process: "process/browser",
+      process: "process/browser",
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
   },
@@ -63,7 +63,7 @@ let config = {
   },
   plugins: [
     new Dotenv({
-      path: `./env.${isLocal ? 'dev' : process.env.NODE_ENV}`
+      path: `./.env.${isLocal ? 'dev' : process.env.NODE_ENV}`
     }),
     new webpack.ProvidePlugin({
       process: 'process/browser',
@@ -86,8 +86,8 @@ let config = {
       ],
     }),
     new webpack.DefinePlugin({
-      'window.IS_LOCAL': JSON.stringify(isLocal),
-      'window.ROUTES': JSON.stringify(getRoutes()),
+      '__IS_LOCAL__': JSON.stringify(isLocal),
+      '__ROUTES__': JSON.stringify(getRoutes()),
     })
   ],
   optimization: {
@@ -117,14 +117,14 @@ if (process.env.NODE_ENV === 'local') {
       compress: true,
     },
   });
-  config.plugins.push(new ForkTsCheckerWebpackPlugin({
-    eslint: {
-      files: `${path.resolve('./src')}/**/*.{ts,tsx,js,jsx}`,
-      options: {
-        overrideConfigFile: path.resolve('./.eslintrc.js'),
-      },
-    },
-  }))
+  // config.plugins.push(new ForkTsCheckerWebpackPlugin({
+  //   eslint: {
+  //     files: `${path.resolve('./src')}/**/*.{ts,tsx,js,jsx}`,
+  //     options: {
+  //       overrideConfigFile: path.resolve('./.eslintrc.js'),
+  //     },
+  //   },
+  // }))
   config.module.rules.push({
     enforce: 'pre',
     test: /\.js$/,

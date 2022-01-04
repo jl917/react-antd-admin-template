@@ -16,7 +16,7 @@ const queryClient = new QueryClient({
 const Query: React.FC = ({ children }) => (
   <QueryClientProvider client={queryClient}>
     {children}
-    <ReactQueryDevtools initialIsOpen={window.IS_LOCAL} />
+    <ReactQueryDevtools initialIsOpen={__IS_LOCAL__} />
   </QueryClientProvider>
 );
 

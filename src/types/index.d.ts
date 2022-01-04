@@ -4,3 +4,6 @@ interface Window {
   MODULES: any;
   ROUTES: any;
 }
+
+declare var __IS_LOCAL__: boolean;
+declare var __ROUTES__: any;

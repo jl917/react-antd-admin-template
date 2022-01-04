@@ -3,7 +3,6 @@ import axios from '@/common/utils/axios';
 import * as ENV from '@/common/constants/env';
 
 const PageNetwork = () => {
-  console.log(ENV);
   const getUrl = async () => {
     const result = await axios.get('https://randomuser.me/api/');
     console.log(result);

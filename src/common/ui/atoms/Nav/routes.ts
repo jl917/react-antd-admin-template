@@ -36,10 +36,6 @@ const routes: IRouter[] = [
   //   path: '/dashboard',
   // },
   {
-    title: 'network',
-    path: '/network',
-  },
-  {
     title: 'sample',
     path: '/sample',
   },
