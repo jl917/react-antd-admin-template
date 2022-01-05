@@ -7,7 +7,7 @@ interface ILoader {
 }
 
 const Loader: ILoader = (elementPath) => {
-  console.log(elementPath)
+  // import내 startWith string필수.
   const Page = React.lazy(() => import(`../components/${elementPath}`));
   return (
     <Layout>

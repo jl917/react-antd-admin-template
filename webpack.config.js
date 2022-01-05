@@ -7,6 +7,7 @@ const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const path = require('path');
 const glob = require("glob");
+const manifest = require('./vendor-manifest.json')
 
 const isLocal = process.env.NODE_ENV === 'local';
 
@@ -87,6 +88,9 @@ let config = {
     new webpack.DefinePlugin({
       '__IS_LOCAL__': JSON.stringify(isLocal),
       '__ROUTES__': JSON.stringify(getRoutes()),
+    }),
+    new webpack.DllReferencePlugin({
+      manifest
     })
   ],
   optimization: {
@@ -132,12 +136,13 @@ if (process.env.NODE_ENV === 'local') {
   });
 }
 
+// components내 .page.tsx 기반 라우팅 
 function getRoutes(){
   const files = glob.sync("./src/components/**/*.page.tsx");
   return files.reduce((routes, pagePath) => {
     pagePath = pagePath.replace('./src/components/', '')
     let entry = pagePath.replace('./components', '');
-  
+
     const endFixPage = '.page.tsx';
     if (entry.endsWith(endFixPage)) {
       entry = entry.slice(0, -9);

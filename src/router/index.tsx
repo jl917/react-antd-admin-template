@@ -4,8 +4,6 @@ import Loader from './Loader';
 
 const routes = __ROUTES__;
 
-console.log(routes)
-
 const Router: React.FC = () => (
   <BrowserRouter>
     <Routes>

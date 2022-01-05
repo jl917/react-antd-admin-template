@@ -5,6 +5,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV='local' webpack serve",
     "dev": "cross-env NODE_ENV='local' webpack serve",
+    "build:dll": "webpack --config webpack.dll.config.js",
     "build": "cross-env NODE_ENV='production' webpack",
     "build:dev": "cross-env NODE_ENV='dev' webpack",
     "build:qa": "cross-env NODE_ENV='qa' webpack",
