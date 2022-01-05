@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssWebpackPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyPlugin = require("copy-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
@@ -14,7 +13,7 @@ const isLocal = process.env.NODE_ENV === 'local';
 let config = {
   entry: './src/index.tsx',
   output: {
-    filename: 'bundle.[name].js',
+    filename: './assets/bundle.[contenthash].js',
     path: path.resolve(__dirname, './dist'),
   },
   resolve: {
@@ -68,12 +67,12 @@ let config = {
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')],
-    }),
+    // new CleanWebpackPlugin({
+    //   cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')],
+    // }),
     new CssWebpackPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: './assets/bundle.[contenthash].css',
+      chunkFilename: './assets/bundle.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       title: 'React-admin-template',
@@ -138,8 +137,6 @@ function getRoutes(){
   return files.reduce((routes, pagePath) => {
     pagePath = pagePath.replace('./src/components/', '')
     let entry = pagePath.replace('./components', '');
-
-    console.log(pagePath)
   
     const endFixPage = '.page.tsx';
     if (entry.endsWith(endFixPage)) {
