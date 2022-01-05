@@ -7,7 +7,11 @@ const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 const path = require('path');
 const glob = require("glob");
-const manifest = require('./vendor-manifest.json')
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const manifest = require('./vendor-manifest.json');
+
+const smp = new SpeedMeasurePlugin();
 
 const isLocal = process.env.NODE_ENV === 'local';
 
@@ -68,9 +72,6 @@ let config = {
     new webpack.ProvidePlugin({
       process: 'process/browser',
     }),
-    // new CleanWebpackPlugin({
-    //   cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')],
-    // }),
     new CssWebpackPlugin({
       filename: './assets/bundle.[contenthash].css',
       chunkFilename: './assets/bundle.[contenthash].css',
@@ -105,7 +106,7 @@ if (process.env.REPORT) {
   config.plugins.push(new BundleAnalyzerPlugin());
 }
 
-if (process.env.NODE_ENV === 'local') {
+if (isLocal) {
   config = Object.assign(config, {
     devtool: 'source-map',
     mode: 'development',
@@ -136,8 +137,18 @@ if (process.env.NODE_ENV === 'local') {
   });
 }
 
+if (!isLocal) {
+  config.cache = {
+    type: 'filesystem',
+    compression: 'gzip',
+  };
+  config.plugins.unshift(new CleanWebpackPlugin({
+    cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')],
+  }))
+}
+
 // components내 .page.tsx 기반 라우팅 
-function getRoutes(){
+function getRoutes () {
   const files = glob.sync("./src/components/**/*.page.tsx");
   return files.reduce((routes, pagePath) => {
     pagePath = pagePath.replace('./src/components/', '')
@@ -148,15 +159,16 @@ function getRoutes(){
       entry = entry.slice(0, -9);
     }
     routes[entry] = pagePath;
-  
+
     const endFixIndex = '/index';
     if (entry.endsWith(endFixIndex)) {
       entry = entry.slice(0, -6);
     }
     routes[entry] = pagePath;
-  
+
     return routes;
   }, {});
 }
 
 module.exports = config;
+// module.exports = smp.wrap(config);

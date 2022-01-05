@@ -28,7 +28,7 @@ const PageSample = () => {
           getUser
         </button>
         <button onClick={() => user404Query.refetch()} type="button">
-          getUser404
+          getUser4043
         </button>
       </div>
       <h1>Todo</h1>

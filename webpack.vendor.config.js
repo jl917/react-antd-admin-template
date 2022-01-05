@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DllPlugin({
+      name: '[name]',
       path: path.resolve(__dirname, '[name]-manifest.json')
     })
   ]
