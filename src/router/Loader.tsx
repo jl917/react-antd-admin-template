@@ -3,11 +3,12 @@ import Loading from '@/common/ui/atoms/Loading';
 import Layout from '@/common/ui/templates/Layout';
 
 interface ILoader {
-  (elementPath: string): React.ReactElement
+  (elementPath: string): any
 }
 
 const Loader: ILoader = (elementPath) => {
-  const Page = React.lazy(() => import(elementPath));
+  console.log(elementPath)
+  const Page = React.lazy(() => import(`../components/${elementPath}`));
   return (
     <Layout>
       <Suspense fallback={<Loading />}>

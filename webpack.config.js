@@ -136,8 +136,10 @@ if (process.env.NODE_ENV === 'local') {
 function getRoutes(){
   const files = glob.sync("./src/components/**/*.page.tsx");
   return files.reduce((routes, pagePath) => {
-    pagePath = pagePath.replace('./src', '..')
+    pagePath = pagePath.replace('./src/components/', '')
     let entry = pagePath.replace('./components', '');
+
+    console.log(pagePath)
   
     const endFixPage = '.page.tsx';
     if (entry.endsWith(endFixPage)) {

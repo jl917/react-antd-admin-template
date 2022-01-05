@@ -4,6 +4,7 @@
   "description": "react-antd-admin-template typescript",
   "scripts": {
     "start": "cross-env NODE_ENV='local' webpack serve",
+    "dev": "cross-env NODE_ENV='local' webpack serve",
     "build": "cross-env NODE_ENV='production' webpack",
     "build:dev": "cross-env NODE_ENV='dev' webpack",
     "build:qa": "cross-env NODE_ENV='qa' webpack",
