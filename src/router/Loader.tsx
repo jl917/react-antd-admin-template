@@ -8,7 +8,7 @@ interface ILoader {
 
 const Loader: ILoader = (elementPath) => {
   // import내 startWith string필수.
-  const Page = React.lazy(() => import(`../components/${elementPath}`));
+  const Page = React.lazy(() => import(`../pages/${elementPath}`));
   return (
     <Layout>
       <Suspense fallback={<Loading />}>

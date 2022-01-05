@@ -147,12 +147,12 @@ if (!isLocal) {
   }))
 }
 
-// components내 .page.tsx 기반 라우팅 
+// pages 내 .page.tsx 기반 라우팅 
 function getRoutes () {
-  const files = glob.sync("./src/components/**/*.page.tsx");
+  const files = glob.sync("./src/pages/**/*.page.tsx");
   return files.reduce((routes, pagePath) => {
-    pagePath = pagePath.replace('./src/components/', '')
-    let entry = pagePath.replace('./components', '');
+    pagePath = pagePath.replace('./src/pages/', '')
+    let entry = pagePath.replace('./pages', '');
 
     const endFixPage = '.page.tsx';
     if (entry.endsWith(endFixPage)) {
