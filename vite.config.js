@@ -36,17 +36,17 @@ export default defineConfig(({ mode, command }) => {
     },
   });
   // local 모드일 경우
-  if (isLocal) {
-    config.plugins.push(
-      checker({
-        typescript: true,
-        eslint: {
-          files: ['./'],
-          extensions: ['js', 'cjs', 'mjs', 'jsx', 'ts', 'tsx'],
-        },
-      }),
-    );
-  }
+  // if (isLocal) {
+  //   config.plugins.push(
+  //     checker({
+  //       typescript: true,
+  //       eslint: {
+  //         files: ['./'],
+  //         extensions: ['js', 'cjs', 'mjs', 'jsx', 'ts', 'tsx'],
+  //       },
+  //     }),
+  //   );
+  // }
 
   return config;
 });
